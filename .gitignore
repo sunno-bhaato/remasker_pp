@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+results/*.log
+results/raw/pilot*/
+results/raw/dbg/
