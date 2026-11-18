@@ -1,0 +1,12 @@
+name,rmse,wd,ds_xgb,overall
+HyperImpute,1.53,2.93,3.13,2.53
+ReMasker++ (W),3.2,1.93,2.73,2.62
+ReMasker++,1.6,3.27,3.6,2.82
+MissForest,4.07,6.2,4.6,4.96
+ReMasker (official),4.6,5.4,5.87,5.29
+MICE,8.67,2.73,8.73,6.71
+GAIN,7.0,8.4,6.87,7.42
+Sinkhorn,7.73,8.87,7.6,8.07
+Mean,8.0,10.8,5.47,8.09
+SoftImpute,9.67,6.6,8.6,8.29
+MIWAE,9.93,8.87,8.8,9.2

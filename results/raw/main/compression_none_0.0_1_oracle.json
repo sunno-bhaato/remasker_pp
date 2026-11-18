@@ -1,0 +1,1 @@
+[{"dataset": "compression", "mech": "none", "rate": 0.0, "seed": 1, "method": "oracle", "ds_xgb": 0.9301482276342149, "ds_lin": 0.6060868253523288}]

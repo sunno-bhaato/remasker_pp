@@ -1,0 +1,21 @@
+\begin{tabular}{lccccc}
+\toprule
+Variant & RMSE & WD & $\Delta$RMSE & $\Delta$WD & $\Delta$RMSE (MNAR)\\
+\midrule
+\remasker{} (official) & 0.1748 & 0.0779 & +0.0\% & +0.0\% & +0.0\%\\
+\midrule
+(A) batched re-implementation & 0.1761 & 0.0816 & -0.2\% & +0.0\% & -1.8\%\\
+(A)+(B) pattern embedding & 0.2072 & 0.0899 & +17.7\% & +20.9\% & +17.0\%\\
+(A)+(D) Wasserstein loss, $\lambda{=}1$ & 0.1908 & 0.0694 & +7.4\% & -13.3\% & +4.5\%\\
+(A)+(E) MC re-masking inference & 0.1660 & 0.0823 & -6.1\% & +1.7\% & -6.5\%\\
+(A)+(E)+(F) progressive inference & 0.1739 & 0.0912 & -1.9\% & +12.4\% & +0.5\%\\
+\midrule
+(A) + uniform mask ratio 0.3 \emph{(control)} & 0.1679 & 0.0530 & -6.3\% & -32.8\% & -3.9\%\\
+(A)+(C) copy-masking, $p_{\text{copy}}{=}0.5$ & 0.1593 & 0.0655 & -10.0\% & -20.2\% & -9.2\%\\
+\midrule
+\textbf{\rmpp}: (A)+(C, $p_{\text{copy}}{=}1$)+(G) & 0.1567 & 0.0607 & -11.5\% & -25.4\% & -9.7\%\\
+\rmpp{} + (E) MC inference & 0.1602 & 0.0791 & -9.3\% & -2.2\% & -9.0\%\\
+\rmpp{} + (F) progressive & 0.1639 & 0.0611 & -8.0\% & -23.9\% & -4.5\%\\
+\textbf{\rmpp{}\,(W)}: \rmpp{} + (D), $\lambda{=}0.3$ & 0.1624 & 0.0533 & -8.8\% & -34.6\% & -7.3\%\\
+\bottomrule
+\end{tabular}

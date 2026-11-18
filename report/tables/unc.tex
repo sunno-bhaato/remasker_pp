@@ -1,0 +1,10 @@
+\begin{tabular}{lcccc}
+\toprule
+Uncertainty estimate & Spearman $\rho$ $\uparrow$ & RMSE, 25\% most confident & RMSE, 25\% least confident & ratio\\
+\midrule
+MC re-masking (E), base model & 0.171 & 0.1624 & 0.1754 & 1.08$\times$\\
+MC re-masking (E), \rmpp & 0.188 & 0.1564 & 0.1707 & 1.09$\times$\\
+\textbf{Learned head (G), \rmpp} & 0.470 & 0.0668 & 0.2316 & 3.47$\times$\\
+Learned head (G), \rmpp{}\,(W) & 0.476 & 0.0714 & 0.2355 & 3.30$\times$\\
+\bottomrule
+\end{tabular}

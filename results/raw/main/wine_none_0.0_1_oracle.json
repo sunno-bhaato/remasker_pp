@@ -1,0 +1,1 @@
+[{"dataset": "wine", "mech": "none", "rate": 0.0, "seed": 1, "method": "oracle", "ds_xgb": 0.8217078340983193, "ds_lin": 0.8135005919658402}]

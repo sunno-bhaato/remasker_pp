@@ -19,6 +19,7 @@ DATASETS = {  # name -> task
     "raisin": "clf", "wine": "clf",
 }
 NEURAL = ["remasker", "pp_base", "pp_pattern", "pp_copy", "pp_wd", "pp_full"]
+SCALE_SENSITIVE = {"mice", "gain", "miwae", "softimpute"}
 BASELINES = ["hyperimpute", "missforest", "mice", "gain", "miwae", "sinkhorn", "softimpute", "mean"]
 
 
@@ -108,6 +109,8 @@ def pp_kwargs(method):
             kw["wd_weight"] = float(tok[1:])
         elif tok == "v":
             kw["var_head"] = True
+        elif tok[0] == "m":
+            kw["mask_ratio"] = float(tok[1:])
     return kw
 
 
@@ -146,7 +149,12 @@ def run_job(dataset, mech, rate, seed, method, max_steps=4000):
             imp = Imputers().get(method, **kw)
         except Exception:
             imp = Imputers().get(method)
-        Xi = np.asarray(imp.fit_transform(pd.DataFrame(Xm)), dtype=np.float64)
+        if method in SCALE_SENSITIVE:  # fit on min-max normalised data (as ReMasker does internally)
+            lo, hi = np.nanmin(Xm, 0), np.nanmax(Xm, 0)
+            Xi = np.asarray(imp.fit_transform(pd.DataFrame((Xm - lo) / (hi - lo + 1e-8))), dtype=np.float64)
+            Xi = np.where(np.isnan(Xm), Xi * (hi - lo + 1e-8) + lo, Xm)
+        else:
+            Xi = np.asarray(imp.fit_transform(pd.DataFrame(Xm)), dtype=np.float64)
         outs = {method: (Xi, None)}
     elapsed = time.time() - t0
     for name, (Xi, unc) in outs.items():

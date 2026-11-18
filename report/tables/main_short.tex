@@ -1,0 +1,14 @@
+\begin{tabular}{lcccccc}
+\toprule
+Method & \multicolumn{3}{c}{RMSE $\downarrow$} & \multicolumn{3}{c}{WD $\downarrow$}\\
+ & MCAR & MAR & MNAR & MCAR & MAR & MNAR\\
+\midrule
+\rmpp{} & \underline{0.1558} & \underline{0.1531} & \underline{0.1613} & 0.0594 & 0.0582 & 0.0643\\
+\rmpp{} (W) & 0.1607 & 0.1604 & 0.1660 & \textbf{0.0510} & \underline{0.0520} & \underline{0.0568}\\
+\remasker{} (official) & 0.1712 & 0.1752 & 0.1778 & 0.0725 & 0.0875 & 0.0737\\
+\midrule
+HyperImpute & \textbf{0.1512} & \textbf{0.1379} & \textbf{0.1569} & 0.0554 & \textbf{0.0520} & \textbf{0.0526}\\
+MissForest & 0.1680 & 0.1738 & 0.1716 & 0.0838 & 0.0936 & 0.0866\\
+MICE & 0.2375 & 0.2232 & 0.2448 & \underline{0.0546} & 0.0522 & 0.0597\\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,19 @@
+\begin{tabular}{lcccccc}
+\toprule
+Method & \multicolumn{3}{c}{RMSE $\downarrow$} & \multicolumn{3}{c}{WD $\downarrow$}\\
+ & MCAR & MAR & MNAR & MCAR & MAR & MNAR\\
+\midrule
+\rmpp{} & \underline{0.1558{\scriptsize$\pm$0.0033}} & \underline{0.1531{\scriptsize$\pm$0.0099}} & \underline{0.1613{\scriptsize$\pm$0.0023}} & 0.0594{\scriptsize$\pm$0.0009} & 0.0582{\scriptsize$\pm$0.0053} & 0.0643{\scriptsize$\pm$0.0020}\\
+\rmpp{} (W) & 0.1607{\scriptsize$\pm$0.0022} & 0.1604{\scriptsize$\pm$0.0111} & 0.1660{\scriptsize$\pm$0.0016} & \textbf{0.0510{\scriptsize$\pm$0.0010}} & \underline{0.0520{\scriptsize$\pm$0.0055}} & \underline{0.0568{\scriptsize$\pm$0.0012}}\\
+\remasker{} (official) & 0.1712{\scriptsize$\pm$0.0030} & 0.1752{\scriptsize$\pm$0.0123} & 0.1778{\scriptsize$\pm$0.0052} & 0.0725{\scriptsize$\pm$0.0035} & 0.0875{\scriptsize$\pm$0.0045} & 0.0737{\scriptsize$\pm$0.0045}\\
+\midrule
+HyperImpute & \textbf{0.1512{\scriptsize$\pm$0.0028}} & \textbf{0.1379{\scriptsize$\pm$0.0045}} & \textbf{0.1569{\scriptsize$\pm$0.0008}} & 0.0554{\scriptsize$\pm$0.0010} & \textbf{0.0520{\scriptsize$\pm$0.0069}} & \textbf{0.0526{\scriptsize$\pm$0.0031}}\\
+MissForest & 0.1680{\scriptsize$\pm$0.0006} & 0.1738{\scriptsize$\pm$0.0086} & 0.1716{\scriptsize$\pm$0.0019} & 0.0838{\scriptsize$\pm$0.0016} & 0.0936{\scriptsize$\pm$0.0076} & 0.0866{\scriptsize$\pm$0.0033}\\
+MICE & 0.2375{\scriptsize$\pm$0.0018} & 0.2232{\scriptsize$\pm$0.0090} & 0.2448{\scriptsize$\pm$0.0034} & \underline{0.0546{\scriptsize$\pm$0.0006}} & 0.0522{\scriptsize$\pm$0.0035} & 0.0597{\scriptsize$\pm$0.0009}\\
+GAIN & 0.2101{\scriptsize$\pm$0.0040} & 0.2055{\scriptsize$\pm$0.0054} & 0.2209{\scriptsize$\pm$0.0074} & 0.1104{\scriptsize$\pm$0.0083} & 0.1154{\scriptsize$\pm$0.0063} & 0.1168{\scriptsize$\pm$0.0045}\\
+MIWAE & 0.2672{\scriptsize$\pm$0.0253} & 0.2812{\scriptsize$\pm$0.0028} & 0.2821{\scriptsize$\pm$0.0202} & 0.1174{\scriptsize$\pm$0.0188} & 0.1277{\scriptsize$\pm$0.0073} & 0.1290{\scriptsize$\pm$0.0206}\\
+Sinkhorn & 0.2210{\scriptsize$\pm$0.0032} & 0.2367{\scriptsize$\pm$0.0110} & 0.2250{\scriptsize$\pm$0.0018} & 0.1260{\scriptsize$\pm$0.0009} & 0.1398{\scriptsize$\pm$0.0026} & 0.1299{\scriptsize$\pm$0.0013}\\
+SoftImpute & 0.2632{\scriptsize$\pm$0.0023} & 0.2446{\scriptsize$\pm$0.0059} & 0.2675{\scriptsize$\pm$0.0080} & 0.0820{\scriptsize$\pm$0.0023} & 0.0980{\scriptsize$\pm$0.0081} & 0.1025{\scriptsize$\pm$0.0200}\\
+Mean & 0.2178{\scriptsize$\pm$0.0002} & 0.2279{\scriptsize$\pm$0.0026} & 0.2269{\scriptsize$\pm$0.0026} & 0.1677{\scriptsize$\pm$0.0005} & 0.1741{\scriptsize$\pm$0.0023} & 0.1740{\scriptsize$\pm$0.0016}\\
+\bottomrule
+\end{tabular}

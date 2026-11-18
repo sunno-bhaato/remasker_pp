@@ -4,3 +4,10 @@ __pycache__/
 results/*.log
 results/raw/pilot*/
 results/raw/dbg/
+*.aux
+*.log
+*.out
+*.nav
+*.snm
+*.toc
+*.synctex.gz

@@ -1,0 +1,12 @@
+name,XGBoost Δ vs oracle,Linear Δ vs oracle
+ReMasker++,-0.2076,-0.0954
+ReMasker++ (W),-0.2069,-0.1005
+ReMasker (official),-0.2214,-0.1047
+HyperImpute,-0.2035,-0.0915
+MissForest,-0.2092,-0.1028
+MICE,-0.2669,-0.1693
+GAIN,-0.227,-0.1246
+MIWAE,-0.2455,-0.1765
+Sinkhorn,-0.2282,-0.1328
+SoftImpute,-0.2437,-0.1517
+Mean,-0.2115,-0.1196
