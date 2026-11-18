@@ -1,9 +1,9 @@
 # ReMasker++
 
 **Missingness-aligned masked autoencoding with learned uncertainty for tabular data imputation.**
-MA 305 (Data Science) end-term project, Team 2: Jandhyala Mohana Sarath Chandra, Aayush Sharma, Arnav Nitin Birari.
+MA 305 (Data Science) end-term course project, Team 2: Jandhyala Mohana Sarath Chandra, Aayush Sharma, Arnav Nitin Birari.
 
-ReMasker++ builds on [ReMasker](https://github.com/alps-lab/remasker) (Du, Melis & Wang, ICLR 2024) and targets
+ReMasker++ builds upon the [ReMasker](https://github.com/alps-lab/remasker) (Du, Melis & Wang, ICLR 2024) and targets
 limitations that the ReMasker authors state themselves:
 
 | ReMasker limitation | ReMasker++ component |
@@ -55,3 +55,4 @@ Variant names: `pp` = batched ReMasker (A); suffixes `_p` pattern embedding, `_c
 | `aggregate.py` | Tables and figures |
 | `data/` | The five UCI datasets (from the ReMasker repository) |
 | `results/raw/` | Raw per-run JSON results |
+
